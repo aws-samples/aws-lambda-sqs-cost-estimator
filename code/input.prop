@@ -1,0 +1,17 @@
+# Default lambda function memory size
+base_lambda_memory_mb=256
+
+# Total process time for N messages in batch = warm_latency_ms + (process_per_message_ms * N)
+# Time spent in function initialization/warm-up
+warm_latency_ms=20
+
+# Time spent for processing each message in milliseconds
+process_per_message_ms=10
+# Max batch size
+max_batch_size=1000
+
+# Additional lambda memory X mb required for managing/parsing/processing N additional messages processed when using variable batch sizes
+#batch_memory_overhead_mb=X
+#batch_increment=N
+batch_memory_overhead_mb=128
+batch_increment=300
